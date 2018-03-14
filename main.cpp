@@ -67,7 +67,7 @@ void lab2() {
         m = a * log(b);
     } else {
         puts("The value you typed is invalid.");
-        return 0;
+        return;
     }
 
     printf("\nResult: %f", m);
@@ -483,9 +483,6 @@ void runLabByNumber(int number) {
                 break;
             case 7:
                 lab5();
-                break;
-            case 8:
-                lab6();
                 break;
             case 9:
                 lab6_2_13();

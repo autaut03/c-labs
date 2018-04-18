@@ -13,7 +13,7 @@ void runLabByNumber(int number);
 int main() {
     // Print available options.
     for(size_t i = 0; i < 17; i++) {
-        cout << i << ") " << labNames[i] << endl;
+        cout << i + 1 << ") " << labNames[i] << endl;
     }
 
     cout << "Choose the lab you want to run and enter it's number: " << endl;
@@ -23,12 +23,12 @@ int main() {
     cin >> labNumber;
 
     // Check if it's valid.
-    if(labNumber < 1 || labNumber > size_t(labNames)) {
+    if(labNumber < 1 || labNumber > 17) {
         cout << "The lab number you've chosen isn't valid.";
         return 1;
     }
 
-    cout << "Running lab #" << labNumber;
+    cout << "Running lab #" << labNumber << endl;
 
     runLabByNumber(labNumber);
 }
@@ -466,53 +466,53 @@ void runLabByNumber(int number) {
         case 1:
             lab1();
             break;
-            case 2:
-                lab2();
-                break;
-            case 3:
-                lab3();
-                break;
-            case 4:
-                lab3_2();
-                break;
-            case 5:
-                lab3_3();
-                break;
-            case 6:
-                lab4();
-                break;
-            case 7:
-                lab5();
-                break;
-            case 9:
-                lab6_2_13();
-                break;
-            case 10:
-                lab7();
-                break;
-            case 11:
-                lab8();
-                break;
-            case 12:
-                lab9();
-                break;
-            case 13:
-                lab9_19();
-                break;
-            case 14:
-                lab9_39();
-                break;
-            case 15:
-                lab10_17();
-                break;
-            case 16:
-                lab11_10();
-                break;
-            case 17:
-                lab12();
-                break;
-            case 18:
-                lab13();
-                break;
+        case 2:
+            lab2();
+            break;
+        case 3:
+            lab3();
+            break;
+        case 4:
+            lab3_2();
+            break;
+        case 5:
+            lab3_3();
+            break;
+        case 6:
+            lab4();
+            break;
+        case 7:
+            lab5();
+            break;
+        case 8:
+            lab6_2_13();
+            break;
+        case 9:
+            lab7();
+            break;
+        case 10:
+            lab8();
+            break;
+        case 11:
+            lab9();
+            break;
+        case 12:
+            lab9_19();
+            break;
+        case 13:
+            lab9_39();
+            break;
+        case 14:
+            lab10_17();
+            break;
+        case 15:
+            lab11_10();
+            break;
+        case 16:
+            lab12();
+            break;
+        case 17:
+            lab13();
+            break;
     }
 }
